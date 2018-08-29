@@ -35,8 +35,8 @@ Le travail s'est effectué en trois étapes&nbsp;:
 
 * Enfin, il fallait ratisser un à un l'ensemble des 1&nbsp;344 fichiers CSV obtenus de l'opération précédente pour filtrer uniquement les paroles prononcées par les élus. On y parvenait à l'aide d'un autre script ([**np14-quiditquoi.py**](np14-quiditquoi.py)) qui identifiait les élus en fonction des différentes façons de les identifier dans les transcriptions (toutes les façons possibles sont indiquées dans le fichier [**deputesAssnat.csv**](deputesAssnat.csv)).<br>
 Toutes les paroles des élus étaient rassemblées dans un grand fichier CSV trop volumineux pour être reproduit ici, mais déposé dans le [Dataverse Scholars Portal](https://dataverse.scholarsportal.info/dataverse/assnat-41e-legislature-quebec). Le fichier ne contient que cinq colonnes&nbsp;:
-* Le numéro d'identification de l'élu.e (tel qu'indiqué dans le fichier deputesAssnat.csv)
-* Le numéro de code du parti (PLQ:p1; PQ:p2; CAQ:p3; QS:p4; indépendants:p5)
-* La date où les mots ont été prononcés
-* L'URL de la source
-* Le texte
+  * Le numéro d'identification de l'élu.e (tel qu'indiqué dans le fichier deputesAssnat.csv)
+  * Le numéro de code du parti (PLQ:p1; PQ:p2; CAQ:p3; QS:p4; indépendants:p5)
+  * La date où les mots ont été prononcés
+  * L'URL de la source
+  * Le texte
