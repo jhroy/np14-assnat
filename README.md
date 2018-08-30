@@ -49,10 +49,10 @@ Par exemple, une lemmatisation et un étiquettage morpho-syntaxique ont été ef
 
 Une modélisation thématique (*topic modeling*) a également été tentée, mais sans grands résultats. En utilisant la bibliothèque python d'apprentissage machine [Scikit Learn](http://scikit-learn.org/stable/), notamment l'[allocation de Dirichlet latente](https://fr.wikipedia.org/wiki/Allocation_de_Dirichlet_latente), il a été possible d'identifier les 10 thèmes les plus souvent abordés par les partis. Mais il était difficile d'identifier clairement ces thématiques.<br>
 Je laisse ici les visualisations résultant de ces analyses. Peut-être y verrez-vous des choses qui ne me sautaient pas aux yeux&nbsp;:
-* Thématiques du [Parti libéral](jhroy.ca/Visualisation_LDA_p1.html) ([Visualisation_LDA_p1.html](Visualisation_LDA_p1.html))
-* Thématiques du [Parti québécois](jhroy.ca/Visualisation_LDA_p2.html) ([Visualisation_LDA_p2.html](Visualisation_LDA_p2.html))
-* Thématiques de la [Coalition avenir Québec](jhroy.ca/Visualisation_LDA_p3.html) ([Visualisation_LDA_p3.html](Visualisation_LDA_p3.html))
-* Thématiques de [Québec solidaire](jhroy.ca/Visualisation_LDA_p4.html) ([Visualisation_LDA_p4.html](Visualisation_LDA_p4.html))
+* Thématiques du [Parti libéral](http://jhroy.ca/Visualisation_LDA_p1.html) ([Visualisation_LDA_p1.html](Visualisation_LDA_p1.html))
+* Thématiques du [Parti québécois](http://jhroy.ca/Visualisation_LDA_p2.html) ([Visualisation_LDA_p2.html](Visualisation_LDA_p2.html))
+* Thématiques de la [Coalition avenir Québec](http://jhroy.ca/Visualisation_LDA_p3.html) ([Visualisation_LDA_p3.html](Visualisation_LDA_p3.html))
+* Thématiques de [Québec solidaire](http://jhroy.ca/Visualisation_LDA_p4.html) ([Visualisation_LDA_p4.html](Visualisation_LDA_p4.html))
 ![](topicsCAQ.png)
 
 *À compléter*
