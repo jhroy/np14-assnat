@@ -48,4 +48,11 @@ Une fois obtenu ce fichier central, différentes analyses étaient possibles. To
 Par exemple, une lemmatisation et un étiquettage morpho-syntaxique ont été effectués à l'aide de l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/). Il en a résulté différents fichiers de *tokens*&nbsp;: quatre pour chacun des partis représentés à l'Assemblée nationale et 140 pour chacun des élus ayant siégé au cours de la 41e législature. Voici un exemple du résultat pour le député sortant de Gouin, Gabriel Nadeau-Dubois ([**d092-tokens.csv**](d092-tokens.csv)).
 
 Une modélisation thématique (*topic modeling*) a également été tentée, mais sans grands résultats. En utilisant la bibliothèque python d'apprentissage machine [Scikit Learn](http://scikit-learn.org/stable/), notamment l'[allocation de Dirichlet latente](https://fr.wikipedia.org/wiki/Allocation_de_Dirichlet_latente), il a été possible d'identifier les 10 thèmes les plus souvent abordés par les partis. Mais il était difficile d'identifier clairement ces thématiques.<br>
-Nous laissons ici les visualisations résultant de ces analyses. Peut-être y verrez-vous des choses qui ne me sautaient pas aux yeux&nbsp;:
+Je laisse ici les visualisations résultant de ces analyses. Peut-être y verrez-vous des choses qui ne me sautaient pas aux yeux&nbsp;:
+* Thématiques du [Parti libéral](jhroy.ca/Visualisation_LDA_p1.html) ([Visualisation_LDA_p1.html](Visualisation_LDA_p1.html))
+* Thématiques du [Parti québécois](jhroy.ca/Visualisation_LDA_p2.html) ([Visualisation_LDA_p2.html](Visualisation_LDA_p2.html))
+* Thématiques de la [Coalition avenir Québec](jhroy.ca/Visualisation_LDA_p3.html) ([Visualisation_LDA_p3.html](Visualisation_LDA_p3.html))
+* Thématiques de [Québec solidaire](jhroy.ca/Visualisation_LDA_p4.html) ([Visualisation_LDA_p4.html](Visualisation_LDA_p4.html))
+![](topicsCAQ.png)
+
+*À compléter*
