@@ -37,22 +37,24 @@ Le travail s'est effectué en trois étapes&nbsp;:
 Toutes les paroles des élus étaient rassemblées dans un grand fichier CSV trop volumineux pour être reproduit ici, mais déposé dans le [Dataverse Scholars Portal](https://dataverse.scholarsportal.info/dataverse/assnat-41e-legislature-quebec).<br>
 Le fichier ne contient que cinq colonnes (chaque ligne étant toujours un paragraphe) &nbsp;:
   * Le numéro d'identification de l'élu.e (tel qu'indiqué dans le fichier deputesAssnat.csv)
-  * Le numéro de code du parti (PLQ:p1; PQ:p2; CAQ:p3; QS:p4; indépendants:p5)
+  * Le numéro de code du parti (**p1** pour le PLQ; **p2** pour le PQ; **p3** pour la CAQ; **p4** pour QS et **p5** pour les indépendants)
   * La date où les mots ont été prononcés
   * L'URL de la source
   * Le texte
 
 #### Quoi?
-Une fois obtenu ce fichier central, différentes analyses étaient possibles. Toutes ne donnaient pas des résultats pertinents.
+Une fois obtenu ce fichier central, différentes analyses étaient possibles. Toutes ne donnaient pas des résultats pertinents&nbsp;:
 
-Par exemple, une lemmatisation et un étiquettage morpho-syntaxique ont été effectués à l'aide de l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/). Il en a résulté différents fichiers de *tokens*&nbsp;: quatre pour chacun des partis représentés à l'Assemblée nationale et 140 pour chacun des élus ayant siégé au cours de la 41e législature. Voici un exemple du résultat pour le député sortant de Gouin, Gabriel Nadeau-Dubois ([**d092-tokens.csv**](d092-tokens.csv)).
+* Par exemple, une lemmatisation et un étiquettage morpho-syntaxique ont été effectués à l'aide de l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/). Il en a résulté différents fichiers de *tokens*&nbsp;: quatre pour chacun des partis représentés à l'Assemblée nationale et 140 pour chacun des élus ayant siégé au cours de la 41e législature. Voici un exemple du résultat pour le député sortant de Gouin, Gabriel Nadeau-Dubois ([**d092-tokens.csv**](d092-tokens.csv)).<br>
+Cette lemmatisation a été accompagnée d'une exclusion des «&nbsp;mots vides&nbsp;» (articles, prépositions, interjections et autres mots vides de sens réunis dans ce fichier&nbsp;: [**stopwords.py**](stopwords.py)). C'est le résultat de cette lemmatisation qui a servi de base au calcul de **richesse du vocabulaire** des élus, calcul réalisé à l'aide de ce script relativement simple&nbsp;: [**np14-voc-dep.py**](np14-voc-dep.py).
 
-Une modélisation thématique (*topic modeling*) a également été tentée, mais sans grands résultats. En utilisant la bibliothèque python d'apprentissage machine [Scikit Learn](http://scikit-learn.org/stable/), notamment l'[allocation de Dirichlet latente](https://fr.wikipedia.org/wiki/Allocation_de_Dirichlet_latente), il a été possible d'identifier les 10 thèmes les plus souvent abordés par les partis. Mais il était difficile d'identifier clairement ces thématiques.<br>
-Je laisse ici les visualisations résultant de ces analyses. Peut-être y verrez-vous des choses qui ne me sautaient pas aux yeux&nbsp;:
-* Thématiques du [Parti libéral](http://jhroy.ca/Visualisation_LDA_p1.html) ([Visualisation_LDA_p1.html](Visualisation_LDA_p1.html))
-* Thématiques du [Parti québécois](http://jhroy.ca/Visualisation_LDA_p2.html) ([Visualisation_LDA_p2.html](Visualisation_LDA_p2.html))
-* Thématiques de la [Coalition avenir Québec](http://jhroy.ca/Visualisation_LDA_p3.html) ([Visualisation_LDA_p3.html](Visualisation_LDA_p3.html))
-* Thématiques de [Québec solidaire](http://jhroy.ca/Visualisation_LDA_p4.html) ([Visualisation_LDA_p4.html](Visualisation_LDA_p4.html))
 ![](topicsCAQ.png)
 
-*À compléter*
+* Une modélisation thématique (*topic modeling*, voir image ci-dessus) a également été tentée, mais sans grands résultats. En utilisant la bibliothèque python d'apprentissage machine [Scikit Learn](http://scikit-learn.org/stable/), notamment l'[allocation de Dirichlet latente](https://fr.wikipedia.org/wiki/Allocation_de_Dirichlet_latente), il a été possible d'identifier les 10 thèmes les plus souvent abordés par les partis. Mais il était difficile d'identifier clairement ces thématiques.<br>
+Je laisse ici les visualisations résultant de ces analyses. Peut-être y verrez-vous des choses qui ne me sautaient pas aux yeux&nbsp;:
+  * Thématiques du [Parti libéral](http://jhroy.ca/Visualisation_LDA_p1.html) ([Visualisation_LDA_p1.html](Visualisation_LDA_p1.html))
+  * Thématiques du [Parti québécois](http://jhroy.ca/Visualisation_LDA_p2.html) ([Visualisation_LDA_p2.html](Visualisation_LDA_p2.html))
+  * Thématiques de la [Coalition avenir Québec](http://jhroy.ca/Visualisation_LDA_p3.html) ([Visualisation_LDA_p3.html](Visualisation_LDA_p3.html))
+  * Thématiques de [Québec solidaire](http://jhroy.ca/Visualisation_LDA_p4.html) ([Visualisation_LDA_p4.html](Visualisation_LDA_p4.html))
+
+*À poursuivre*
